@@ -11,9 +11,10 @@
         <a href='/posts/create'>create</a>
         <div class='posts'>
             @foreach ($posts as $post)
-                <div class=post>
+                <div class=post style="margin: 40px 0;">
                     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                     <p class='body'>{{ $post->body }}</p>
+                    <a href="/posts/{{$post->id}}/edit">edit</a>
                 </div>
             @endforeach
         </div>
