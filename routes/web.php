@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;  //外部にあるPostControllerクラスをインポート。
-
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +24,4 @@ Route::get('/posts/{post}', [PostController::class ,'show']);
 Route::put('/posts/{post}', [PostController::class ,'update']);
 // '/posts/{対象データのID}'にGetリクエストが来たら、PostControllerのshowメソッドを実行する
 Route::post('/posts', [PostController::class, 'store']);
+Route::get('/categories/{category}', [CategoryController::class,'index']);
